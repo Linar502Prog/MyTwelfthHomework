@@ -1,22 +1,22 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-#include<Windows.h>
+
 
 int main() {
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
-    std::ifstream file("C:\\Users\\Ëèíàð\\Desktop\\first1.txt");
+    setlocale(LC_ALL, "RUS");
+    std::ifstream file("first2.txt");
     std::string s;
     if (file.is_open()) {
-        while (!(file >> s).eof()) {
+        while (file >> s) {
             std::cout << s << std::endl;
         }
     }
     else {
-        std::cout << "Ôàéë íå íàéäåí" << std::endl;
+        std::cout << "Ð¤Ð°Ð¹Ð» Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½" << std::endl;
     }
 
     return EXIT_SUCCESS;
 }
+
 
